@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    <style>
+        header {
+            /* border: 2px solid white; */
+            background-color: rgba(0, 0, 0, 0.397);
+            width: 100%;
+            display: inline-block;
+            position: sticky;
+            margin: auto;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            background-image: url("bg.png");
+            background-image: url("bg2.jpeg");
+            /* background-image: url("images.jpeg"); */
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            /* background-size: 1000px; */
+            font-family: 'Passion One', cursive;
+            font-size: 20px;
+        }
+        
+        input:invalid {
+            animation: shake 300ms;
+        }
+        
+        @keyframes shake {
+            25% {
+                transform: (4px);
+            }
+            50% {
+                transform: (-4px);
+            }
+            75% {
+                transform: (4px);
+            }
+        }
+        
+        .left {
+            /* border: 2px solid white; */
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            top: 0px;
+            padding: 8px;
+        }
+        
+        .mid {
+            /* border: 2px solid rgb(0, 255, 213); */
+            display: block;
+            margin: 0px auto;
+            width: 80%;
+            text-align: center;
+        }
+        
+        .right {
+            /* border: 2px solid rgb(255, 0, 255); */
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            top: 0px;
+        }
+        
+        .navbar {
+            display: inline-block;
+            position: relative;
+            /* border: 2px solid green; */
+            right: 45px;
+        }
+        
+        .navbar li {
+            /* border: 2px solid red; */
+            display: inline-block;
+        }
+        
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            margin: auto;
+        }
+        
+        .navbar li a:active {
+            border-radius: 12px;
+            background-color: white;
+            color: black;
+        }
+        
+        .navbar li a:hover {
+            background-color: rgb(78, 74, 74);
+            border-radius: 12px;
+            color: black;
+        }
+        
+        .left img {
+            width: 50px;
+            /* filter: invert(100%); */
+        }
+        
+        .left img:hover {
+            filter: invert(100%);
+            cursor: pointer;
+            animation-name: animation1;
+            animation-duration: 15s;
+            /* animation: ease-out; */
+        }
+        
+        @keyframes animation1 {
+            0% {
+                width: 50px;
+            }
+            25% {
+                width: 60px;
+                right: 1px;
+            }
+            50% {
+                width: 70px;
+                right: 2px;
+            }
+            100% {
+                width: 80px;
+                right: 3px;
+            }
+        }
+        
+        .search {
+            margin: 8px 13px;
+            padding: 12px 20px;
+            border: 0px;
+            border-radius: 12px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0);
+            font-family: 'Passion One', cursive;
+            font-size: 20px;
+        }
+        
+        .search::placeholder {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'Passion One', cursive;
+            font-size: 20px;
+        }
+        /* Search Focus means that when you are entering text what will happen */
+        
+        .search:focus {
+            background-color: white;
+            color: black;
+        }
+        /* .search:focus::placeholder {
+            color: rgb(0, 0, 0);
+        } */
+        
+        .search:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        
+        .search:hover::placeholder {
+            color: rgb(0, 0, 0);
+            /* since overlaping takes place */
+        }
+        
+        .search:focus:hover {
+            cursor: text;
+        }
+        
+        .container {
+            margin: 50px auto;
+            padding: 10px 10px;
+            width: 46%;
+            background-color: rgba(0, 0, 0, 0.507);
+            border: 2px solid rgba(255, 255, 255, 0.411);
+            border-radius: 11px;
+        }
+        
+        h1 {
+            letter-spacing: 1.2px;
+            display: block;
+            margin: auto;
+            color: white;
+            /* border: 2px solid red; */
+            text-align: center;
+        }
+        
+        .btndiv {
+            margin: 25px 0px 5px 0px;
+        }
+        
+        .form-group {
+            background-color: rgba(0, 0, 0, 0.568);
+            padding: 10px 15px;
+            margin: 15px 2px;
+            border-radius: 5px;
+        }
+        
+        div p {
+            color: white;
+        }
+        
+        .form {
+            height: 27px;
+            width: 200px;
+            display: block;
+            padding: 6px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.768);
+            font-family: 'Passion One', cursive;
+            font-size: 18px;
+            /* margin: 10px; */
+        }
+        
+        .btn {
+            /* margin: 15px 2px ; */
+            display: block;
+            margin: auto;
+            height: 45px;
+            width: 25%;
+            background-color: rgb(255, 255, 255, 0.768);
+            border: none;
+            border-radius: 5px;
+            font-family: 'Passion One', cursive;
+            font-size: 20px;
+        }
+        
+        .btn:hover {
+            /* background-color: rgba(0, 0, 0, 0.623); */
+            background-color: rgba(24, 24, 24, 255);
+            color: white;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            /* border: 5px solid red; */
+            border-radius: 15px;
+            top: 32px;
+            /* position: relative; */
+            /* z-index: 1; */
+            background-color: rgb(215, 215, 213);
+            display: none;
+            /* color: black; */
+        }
+        
+        .dropdown-content a {
+            width: 60%;
+            /* color: black; */
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 30px;
+            font-size: 15px;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .dropdown:hover .dropdown-content a {
+            /* color: white; */
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            /* font-size: 18px; */
+            ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="main copy.html" target="_blank"> Home</a></li>
+                <li><a href="" target="_blank"> About Us</a></li>
+                <li><a href="" target="_blank"> BMI Calculator</a></li>
+                <li>
+                    <!-- <a href="" target="_blank"> Contact Us</a> -->
+                    <div class="dropdown">
+                        <a href="" target="_blank" id="dropbtn"> Contact Us</a>
+                        <div class="dropdown-content">
+                            <a href="#">+919643798169</a>
+                            <a href="#">Whatsapp</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Facebook</a>
+                        </div>
+                    </div>
+                    <!-- <div class="dropdown">
+                        <a href="" target="_blank" class="dropbtn"> Contact Us</a>
+                        <div class="dropdown-content">
+                            <a href="#">+919643798169</a>
+                            <a href="#">
+                                <div class="logo">
+                                    <img src="w.png" alt="" class="wa">
+                                </div>
+                                <div class="Sname">
+                                    Whatsapp
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="logo">
+
+                                </div>
+                                <div class="Sname">
+                                    Instagram
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="logo">
+
+                                </div>
+                                <div class="Sname">
+                                    Facebook
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <input type="text" name="" id="" class="search" placeholder="Search ">
+        </div>
+    </header>
+    <div class="container">
+        <h1>Start you journey now</h1>
+        <form action="backend.php">
+            <div class="form-group">
+                <p>Name: </p>
+                <input type="text" placeholder="Enter Your name" class="form" pattern="[a-z]*" required/>
+            </div>
+            <div class="form-group">
+                <p>Age: </p>
+                <input type="number" placeholder="Enter Your age" class="form" pattern="[0-9]*">
+            </div>
+            <div class="form-group">
+                <p>Email: </p>
+                <input type="email" placeholder="Enter Your Email Add." class="form">
+            </div>
+            <div class="form-group">
+                <p>Contact Details: </p>
+                <input type="number" placeholder="Enter Your Phone Number" class="form" pattern="[0-9]*" required/>
+            </div>
+            <div class="btndiv">
+                <button class="btn">Begin the Journey</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
